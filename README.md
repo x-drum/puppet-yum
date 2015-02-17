@@ -5,7 +5,7 @@ That's it: Yet another yum module to manage yum repositories stanzas.
 Used to manage yum configuration (currently only a stub).
 
 ### Parameters:
-[*purge*]  
+*purge:*  
   Discard all the unmanaged stanzas, default: present.
 
 ### Sample Usage:
