@@ -1,13 +1,13 @@
 {
   "name": "xdrum-yum",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Alessio Cassibba (X-Drum)",
-  "summary": "Yum Module",
+  "summary": "Yet another yum module to manage yum repositories stanzas.",
   "license": "Apache 2.0",
   "source": "git://github.com/x-drum/puppet-yum",
   "project_page": "https://github.com/x-drum/puppet-yum",
   "issues_url": "https://github.com/x-drum/puppet-yum/issues",
-  "description": "Manage yum repositories.",
+  "description": "Yet another yum module to manage yum repositories stanzas.",
   "tags": [
     "rhel",
     "centos",
