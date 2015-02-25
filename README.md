@@ -19,11 +19,20 @@ Used to manage yum configuration (currently only a stub).
 A resource for managing yum repositories stanzas
 
 ### Parameters:
+  *baseurl:*  
+    The URL for the for this repository, default: absent.
+
  *description:*  
    Repository description.
 
  *enabled:*  
    Whether this repository is enabled., default: true.
+
+ *ensure:*  
+   Specify if this stanza should be present or not, default: present
+
+ *exclude:*  
+   Matching packages will never be considered in updates or installs for this repo, default: absent.
 
  *gpgcheck:*  
    Whether to check the GPG signature on packages, default: false.
@@ -31,14 +40,11 @@ A resource for managing yum repositories stanzas
  *gpgkey:*  
    The URL for the GPG key, default: undef.
 
- *mirrorlist:*  
-    The URL for the GPG key for this repository, default: absent.
-
- *exclude:*  
-   Matching packages will never be considered in updates or installs for this repo, default: absent.
-
  *includepkgs:*  
   Only packages matching one of the shell globs will be considered for update or install, default: absent.
+
+ *mirrorlist:*  
+    The URL for the GPG key for this repository, default: absent.
 
  *priority:*  
    Priority of this repository from 1-99, default: absent.
@@ -51,9 +57,6 @@ A resource for managing yum repositories stanzas
  
  *proxy_password:*  
    Password for this proxy.
-
- *ensure:*  
-   Specify if this stanza should be present or not, default: present
 
 ### Sample Usage:
 ```
