@@ -1,6 +1,6 @@
 {
   "name": "xdrum-yum",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Alessio Cassibba (X-Drum)",
   "summary": "Yet another yum module to manage yum repositories stanzas.",
   "license": "Apache 2.0",
