@@ -25,12 +25,12 @@ class yum (
 
   file { "$yum::params::confdir":
     ensure  => 'directory',
+    force   => true,
     owner   => root,
     group   => root,
     mode    => '0755',
-    recurse => true,
     purge   => $purge,
-    force   => true,
+    recurse => true,
   }
 
 }

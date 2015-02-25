@@ -53,18 +53,19 @@
 # Copyright 2015 Alessio Cassibba (X-Drum), unless otherwise noted.
 #
 define yum::repo (
-   $description = undef,
-   $enabled = true,
-   $gpgcheck = false,
-   $gpgkey = undef,
-   $mirrorlist = absent,
-   $exclude = absent,
-   $includepkgs = absent,
-   $priority = absent,
-   $proxy = absent,
-   $proxy_password = absent,
-   $proxy_username = absent,
-   $ensure = present,
+  $baseurl        = absent,
+  $description    = undef,
+  $enabled        = true,
+  $ensure         = present,
+  $exclude        = absent,
+  $gpgcheck       = false,
+  $gpgkey         = undef,
+  $includepkgs    = absent,
+  $mirrorlist     = absent,
+  $priority       = absent,
+  $proxy          = absent,
+  $proxy_password = absent,
+  $proxy_username = absent,
 ){
   include yum
 
@@ -76,19 +77,19 @@ define yum::repo (
   }
 
   yumrepo { $name:
-	baseurl        => $baseurl,
-	mirrorlist     => $mirrorlist,
-	descr          => $description,
-	enabled        => $enabled,
-	gpgcheck       => $gpgcheck,
-	gpgkey         => $gpgkey,
-	exclude        => $exclude,
-	includepkgs    => $includepkgs,
-	priority       => $priority,
-	proxy          => $proxy,
-	proxy_username => $proxy_username,
-	proxy_password => $proxy_password,
-	require        => File["/etc/yum.repos.d"],
-	ensure         => $ensure,
+    baseurl        => $baseurl,
+    descr          => $description,
+    enabled        => $enabled,
+    ensure         => $ensure,
+    exclude        => $exclude,
+    gpgcheck       => $gpgcheck,
+    gpgkey         => $gpgkey,
+    includepkgs    => $includepkgs,
+    mirrorlist     => $mirrorlist,
+    priority       => $priority,
+    proxy          => $proxy,
+    proxy_username => $proxy_username,
+    proxy_password => $proxy_password,
+    require        => File["/etc/yum.repos.d"],
   }
 }
