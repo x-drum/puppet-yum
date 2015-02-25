@@ -3,6 +3,9 @@
 # A resource for managing yum stanzas
 #
 # Parameters:
+#  baseurl
+#    The URL for the for this repository, default: absent.
+#
 #  description
 #    Repository description.
 #
@@ -16,7 +19,7 @@
 #    The URL for the GPG key, default: undef.
 #
 #  mirrorlist:
-#     The URL for the GPG key for this repository, default: absent.
+#     The URL for the for this repository, default: absent.
 #
 #  exclude:
 #    Matching packages will never be considered in updates or installs for this repo, default: absent.
