@@ -72,13 +72,11 @@ define yum::repo (
 ){
   include yum
 
-  if $gpgcheck {
+  if $gpgcheck and ! $gpgkey == 0 {
   	validate_string($gpgkey)
   	if ! $gpgkey and $gpgkey == undef {
   		fail("specify a valid url for gpgkey")
   	}
-  } else {
-    $gpgcheck = 0
   }
 
   yumrepo { $name:
